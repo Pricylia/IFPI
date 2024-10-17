@@ -4,7 +4,7 @@
 
 ## Intalando Pacotes
 
-- FastAPI: ```pip install "fastapi[standard]```
+- FastAPI: ```pip install "fastapi[standard]"```
 - SQL: ```pip install sqlmodel```
 
 ## Como usar
