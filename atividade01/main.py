@@ -12,15 +12,11 @@ templates = Jinja2Templates(directory="templates")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-@app.get("/")
-def read_root():
-    return {"message": "Bem-vindo à aplicação FastAPI!"}
-
 @app.on_event("startup")
 def on_startup():
     init_db()
 
-@app.get("/patrocars")
+@app.get("/")
 async def list_montadoras(request: Request, session: Session = Depends(get_session)):
     tela = session.query(Montadora).all()
     return templates.TemplateResponse("tela_inicial.html", {"request": request, "tela": tela})
