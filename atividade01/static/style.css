@@ -1,11 +1,142 @@
+/* Centralizar o conteúdo da página */
 body {
-    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-body a{
+/* Estilo para o título */
+h1 {
+    margin-bottom: 20px; /* Espaço entre o título e o botão */
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo Listar Montadoras */
+.lista-montadoras {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-montadoras li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.botoes a button,
+.botoes form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.botoes a button:hover,
+.botoes form button:hover {
+    background-color: #0056b3;
+}
+
+.botoes form button {
+    background-color: #dc3545;
+}
+
+.botoes form button:hover {
+    background-color: #c82333;
+}
+
+/* Estilo Form criar montadora */
+.form-montadora {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilo para os labels e inputs dentro do contêiner */
+.form-montadora label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-montadora input[type="text"],
+.form-montadora input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-montadora button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-montadora button:hover {
+    background-color: #0056b3;
+}
+
+.form-montadora a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
     text-decoration: none;
 }
 
-body button a{
-    color: black;
+.form-montadora a:hover {
+    text-decoration: underline;
+}
+
+.form-montadora p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
 }

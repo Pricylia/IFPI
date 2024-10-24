@@ -16,6 +16,11 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def on_startup():
     init_db()
 
+@app.get("/patrocars")
+async def list_montadoras(request: Request, session: Session = Depends(get_session)):
+    tela = session.query(Montadora).all()
+    return templates.TemplateResponse("tela_inicial.html", {"request": request, "tela": tela})
+
 @app.get("/montadoras")
 async def list_montadoras(request: Request, session: Session = Depends(get_session)):
     montadoras = session.query(Montadora).all()
